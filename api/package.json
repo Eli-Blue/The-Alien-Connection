@@ -1,0 +1,19 @@
+{
+  "name": "tac-api",
+  "version": "1.0.0",
+  "description": "Azure Functions backend for The Alien Connection save game & telemetry",
+  "main": "dist/src/functions/*.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "func start"
+  },
+  "dependencies": {
+    "@azure/functions": "4.16.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.4",
+    "typescript": "5.7.3"
+  }
+}
