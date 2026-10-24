@@ -1,0 +1,19 @@
+name: Godot validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.7.2
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import project
+        run: godot --headless --import
+      - name: Check scripts
+        run: |
+          for f in $(find scripts -name '*.gd'); do godot --headless --check-only --script "res://$f"; done
