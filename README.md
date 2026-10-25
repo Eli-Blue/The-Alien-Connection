@@ -14,6 +14,14 @@ You arrive as the sole emergency field engineer dispatched to assess the quarant
 
 ---
 
+## 🖼️ Scenes
+
+| Scene 1 – Static Ward | Scene 2 – Communications Lab | Scene 3 – Oscilloscope Puzzle |
+| :---: | :---: | :---: |
+| ![Scene 1 – Static Ward](docs/images/scene-01-static-ward.webp) | ![Scene 2 – Communications Lab](docs/images/scene-02-communications-lab.webp) | ![Scene 3 – Oscilloscope Puzzle](docs/images/scene-03-oscilloscope-puzzle.webp) |
+
+---
+
 ## 🎮 Gameplay Features
 
 ### 1. Retro Sci-Fi / Analog Horror Atmosphere
