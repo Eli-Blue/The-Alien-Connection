@@ -1,0 +1,60 @@
+[
+  {
+    "id": "data_reel",
+    "name": "De-gaussed Data Reel",
+    "description": "Magnetic recording tape from the primary borehole hydrophone array.",
+    "x": 180,
+    "y": 450,
+    "width": 48,
+    "height": 48,
+    "clue": "Search among the fallen magnetic tape racks on the lower left floor."
+  },
+  {
+    "id": "dial_knob",
+    "name": "Emergency Tuner Dial",
+    "description": "Precision potentiometer knob. Essential to calibrate the receiver frequency.",
+    "x": 370,
+    "y": 350,
+    "width": 44,
+    "height": 44,
+    "clue": "Lying beside the overturned coffee mug on the communications bench."
+  },
+  {
+    "id": "bio_keycard",
+    "name": "Bio-Safety Pass (Lvl 2)",
+    "x": 290,
+    "y": 430,
+    "width": 40,
+    "height": 50,
+    "clue": "Slipped halfway under the fallen clipboard near the console chair."
+  },
+  {
+    "id": "vacuum_tube",
+    "name": "Thermionic Vacuum Tube",
+    "description": "High-frequency amplifier valve. Needed to boost the carrier wave signal.",
+    "x": 520,
+    "y": 280,
+    "width": 36,
+    "height": 54,
+    "clue": "Resting on the component shelf above the oscilloscope rack."
+  },
+  {
+    "id": "diary_fragment",
+    "description": "Scribbled formulas: \"84.7 kHz harmonic carrier. Vault code: Core-Array-Pass-Vault\".",
+    "x": 620,
+    "y": 380,
+    "width": 46,
+    "height": 50,
+    "clue": "Pinned beneath the magnetic tape drive housing."
+  },
+  {
+    "id": "dosimeter",
+    "name": "EMF / Radiation Dosimeter",
+    "description": "Analog electromagnetic field counter. The needle trembles toward max scale.",
+    "x": 710,
+    "y": 470,
+    "width": 34,
+    "height": 52,
+    "clue": "Tucked inside the open cable trough near the vault entryway."
+  }
+]

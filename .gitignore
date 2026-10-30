@@ -147,3 +147,13 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+# Godot 4
+.godot/
+.import/
+*.translation
+export.cfg
+export_credentials.cfg
+# export_presets.cfg may contain credentials; commit it only if it has none
+export_presets.cfg
+*.tmp

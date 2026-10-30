@@ -63,6 +63,31 @@ You arrive as the sole emergency field engineer dispatched to assess the quarant
 
 ---
 
+## 🛸 Godot 4.7.2 Version
+
+A Godot 4.7.2 port scaffold lives alongside the legacy web version.
+
+1. Install [Godot 4.7.2](https://godotengine.org/download) (standard build).
+2. Open Godot, choose **Import**, and select `project.godot` in this repository.
+3. Press **F5** to run `scenes/Main.tscn`.
+
+Headless validation: `godot --headless --import` (also run by `.github/workflows/godot-validate.yml`).
+
+### Godot structure
+
+- `project.godot`, `icon.svg` — project config (Compatibility renderer)
+- `scenes/` — scenes (`Main.tscn`)
+- `scripts/` — GDScript: `main.gd`, `hidden_object.gd`, `autoload/` (game state, data loader, scene manager), `puzzles/` (puzzle base, keypad, oscilloscope)
+- `assets/data/` — story logs, hidden objects and puzzle parameters migrated to JSON from the TypeScript sources; `assets/images`, `assets/audio`, `assets/ui` are placeholders (the original game generates graphics and audio procedurally)
+
+**Migrated:** logs, hidden-object definitions, puzzle constants, game state. **Remaining:** Airlock/Lab/Oscilloscope/Keypad/Vault scenes, HUD, dialogue UI, audio, save/load.
+
+### Legacy TypeScript / Azure version
+
+The Phaser/Vite web game in `src/`, `api/`, and the Azure workflows is unchanged and still works as described below.
+
+---
+
 ## 🛠️ Tech Stack & Architecture
 
 - **Game Engine**: [Phaser 3](https://phaser.io/) (v3.90.0)
