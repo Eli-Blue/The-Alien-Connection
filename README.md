@@ -2,7 +2,28 @@
 
 > **"We do not come from above. We have been asleep under your continent for three hundred million years. Your drill awakened the nerve endings."**
 
-*The Alien Connection* is a retro sci-fi analog horror and mystery puzzle game built with **Phaser 3**, **TypeScript**, and **Vite**, engineered for deployment to **Azure Static Web Apps** with an optional **Azure Functions** backend.
+*The Alien Connection* is a retro sci-fi analog horror and mystery puzzle game. The primary game is now a **native Solar2D application**, written in Lua and playable in the Solar2D Simulator or as a Solar2D mobile/desktop build. The original Phaser/Vite browser version and Azure deployment scaffold remain available as an alternate build.
+
+## 🚀 Play with Solar2D
+
+1. Install the [Solar2D Simulator](https://solar2d.com/).
+2. Open this repository's `main.lua` in the Simulator, or open the repository folder as a Solar2D project.
+3. Use touch or mouse to investigate rooms, collect the six lab components, tune the oscilloscope, enter the vault code, and finish the transmission.
+
+The Solar2D game is self-contained: it uses procedural vector graphics and Solar2D's built-in JSON module, with no external art, audio, or Lua packages. Progress can be saved from the in-game **SAVE** button and resumed from the title screen.
+
+To build a standalone app, open the project in Solar2D Simulator and choose **Build** for the target platform. `config.lua` configures the 960 × 640 landscape game canvas.
+
+### Optional browser version
+
+The original browser client is still available using Node.js 18+:
+
+```bash
+npm install
+npm run dev
+npm test
+npm run build
+```
 
 ---
 
@@ -11,6 +32,14 @@
 **October 1983.** Four thousand meters beneath the sub-arctic permafrost, the decommissioned missile silo housing the **Blackwood Bio-Acoustic Research Array (Station Echo-7)** went completely dark four hours after locking onto an anomalous deep-core radio frequency.
 
 You arrive as the sole emergency field engineer dispatched to assess the quarantine lockdown. As you restore auxiliary power and delve into the abandoned communications lab, you uncover fragmented audio logs and scribbled notes left behind by lead researcher Dr. Aris Thorne. The telemetry antennas were never receiving transmissions from space—they were pointed straight down into the continental bedrock.
+
+---
+
+## 🖼️ Scenes
+
+| Scene 1 – Static Ward | Scene 2 – Communications Lab | Scene 3 – Oscilloscope Puzzle |
+| :---: | :---: | :---: |
+| ![Scene 1 – Static Ward](docs/images/scene-01-static-ward.webp) | ![Scene 2 – Communications Lab](docs/images/scene-02-communications-lab.webp) | ![Scene 3 – Oscilloscope Puzzle](docs/images/scene-03-oscilloscope-puzzle.webp) |
 
 ---
 
@@ -126,6 +155,22 @@ Generates production-optimized assets in `dist/`.
 
 ---
 
+## 🛠️ Solar2D Game Features
+
+- **Platform and language**: [Solar2D](https://solar2d.com/) with Lua
+- **Rendering and input**: native Solar2D display objects and touch controls, including mouse input in the Simulator
+- **Progression**: airlock, hidden-object lab, oscilloscope calibration, vault keypad, and finale
+- **Persistence**: local JSON save in Solar2D's Documents directory
+- **Assets**: all room art and interface graphics are drawn procedurally; no downloads required
+
+---
+
+## 🌐 Legacy Browser Build
+
+The alternate Phaser 3 / TypeScript implementation remains in `src/` and can still be run and tested with the npm scripts above. It retains the original Vite and Azure Static Web Apps deployment setup.
+
+---
+
 ## ☁️ Azure Static Web Apps Deployment
 
 This repository includes a production-ready GitHub Actions workflow at [`.github/workflows/azure-static-web-apps.yml`](.github/workflows/azure-static-web-apps.yml) configured for Azure Static Web Apps.
@@ -171,6 +216,8 @@ This repository includes a production-ready GitHub Actions workflow at [`.github
 ├── .github/
 │   └── workflows/
 │       └── azure-static-web-apps.yml # CI/CD deployment to Azure Static Web Apps
+├── main.lua                         # Native Solar2D game and investigation flow
+├── config.lua                       # Solar2D landscape display configuration
 ├── api/                             # Azure Functions v4 Backend Scaffold
 │   ├── host.json                    # Azure Functions host settings
 │   ├── package.json                 # Azure Functions dependencies (@azure/functions)
@@ -180,7 +227,7 @@ This repository includes a production-ready GitHub Actions workflow at [`.github
 │           ├── saveState.ts         # POST /api/saveState save endpoint
 │           ├── loadState.ts         # GET /api/loadState state loader
 │           └── status.ts            # GET /api/status telemetry endpoint
-├── src/                             # Game Frontend Source Code
+├── src/                             # Alternate Phaser browser client
 │   ├── audio/
 │   │   └── SoundEngine.ts           # Web Audio API retro sci-fi synth & sound FX
 │   ├── scenes/
@@ -216,4 +263,3 @@ This repository includes a production-ready GitHub Actions workflow at [`.github
 ## 📜 License & Credits
 
 Created for **The Alien Connection** project. All textures and audio are procedurally generated in code without proprietary third-party visual or audio assets.
-
