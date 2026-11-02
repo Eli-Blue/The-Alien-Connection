@@ -2,7 +2,28 @@
 
 > **"We do not come from above. We have been asleep under your continent for three hundred million years. Your drill awakened the nerve endings."**
 
-*The Alien Connection* is a retro sci-fi analog horror and mystery puzzle game built with **Phaser 3**, **TypeScript**, and **Vite**, engineered for deployment to **Azure Static Web Apps** with an optional **Azure Functions** backend.
+*The Alien Connection* is a retro sci-fi analog horror and mystery puzzle game. The primary game is now a **native Solar2D application**, written in Lua and playable in the Solar2D Simulator or as a Solar2D mobile/desktop build. The original Phaser/Vite browser version and Azure deployment scaffold remain available as an alternate build.
+
+## 🚀 Play with Solar2D
+
+1. Install the [Solar2D Simulator](https://solar2d.com/).
+2. Open this repository's `main.lua` in the Simulator, or open the repository folder as a Solar2D project.
+3. Use touch or mouse to investigate rooms, collect the six lab components, tune the oscilloscope, enter the vault code, and finish the transmission.
+
+The Solar2D game is self-contained: it uses procedural vector graphics and Solar2D's built-in JSON module, with no external art, audio, or Lua packages. Progress can be saved from the in-game **SAVE** button and resumed from the title screen.
+
+To build a standalone app, open the project in Solar2D Simulator and choose **Build** for the target platform. `config.lua` configures the 960 × 640 landscape game canvas.
+
+### Optional browser version
+
+The original browser client is still available using Node.js 18+:
+
+```bash
+npm install
+npm run dev
+npm test
+npm run build
+```
 
 ---
 
@@ -63,49 +84,19 @@ You arrive as the sole emergency field engineer dispatched to assess the quarant
 
 ---
 
-## 🛠️ Tech Stack & Architecture
+## 🛠️ Solar2D Game Features
 
-- **Game Engine**: [Phaser 3](https://phaser.io/) (v3.90.0)
-- **Language**: [TypeScript](https://www.typescriptlang.org/) (v5.7.3)
-- **Bundler & Dev Server**: [Vite](https://vite.dev/) (v6.4.4)
-- **Audio Engine**: Web Audio API Procedural Synthesizer (`SoundEngine.ts`)
-- **Backend Scaffold**: [Azure Functions v4 Node/TypeScript](https://learn.microsoft.com/azure/azure-functions/)
-- **Hosting**: [Azure Static Web Apps](https://azure.microsoft.com/services/app-service/static/)
-- **CI/CD**: GitHub Actions
-- **Testing**: [Vitest](https://vitest.dev/) (v5.0.4)
+- **Platform and language**: [Solar2D](https://solar2d.com/) with Lua
+- **Rendering and input**: native Solar2D display objects and touch controls, including mouse input in the Simulator
+- **Progression**: airlock, hidden-object lab, oscilloscope calibration, vault keypad, and finale
+- **Persistence**: local JSON save in Solar2D's Documents directory
+- **Assets**: all room art and interface graphics are drawn procedurally; no downloads required
 
 ---
 
-## 🚀 Quick Start / Local Setup
+## 🌐 Legacy Browser Build
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) v18+ (tested on Node 20 and 24)
-- npm v9+
-
-### 1. Clone & Install Dependencies
-```bash
-git clone https://github.com/Eli-Blue/The-Alien-Connection.git
-cd The-Alien-Connection
-npm install
-```
-
-### 2. Run Game Locally in Development Mode
-```bash
-npm run dev
-```
-Open your browser at `http://localhost:3000`.
-
-### 3. Run Automated Tests
-```bash
-npm test
-```
-Executes all unit and integration tests for state management, puzzle validation, and lore progression.
-
-### 4. Build for Production
-```bash
-npm run build
-```
-Generates production-optimized assets in `dist/`.
+The alternate Phaser 3 / TypeScript implementation remains in `src/` and can still be run and tested with the npm scripts above. It retains the original Vite and Azure Static Web Apps deployment setup.
 
 ---
 
@@ -154,6 +145,8 @@ This repository includes a production-ready GitHub Actions workflow at [`.github
 ├── .github/
 │   └── workflows/
 │       └── azure-static-web-apps.yml # CI/CD deployment to Azure Static Web Apps
+├── main.lua                         # Native Solar2D game and investigation flow
+├── config.lua                       # Solar2D landscape display configuration
 ├── api/                             # Azure Functions v4 Backend Scaffold
 │   ├── host.json                    # Azure Functions host settings
 │   ├── package.json                 # Azure Functions dependencies (@azure/functions)
@@ -163,7 +156,7 @@ This repository includes a production-ready GitHub Actions workflow at [`.github
 │           ├── saveState.ts         # POST /api/saveState save endpoint
 │           ├── loadState.ts         # GET /api/loadState state loader
 │           └── status.ts            # GET /api/status telemetry endpoint
-├── src/                             # Game Frontend Source Code
+├── src/                             # Alternate Phaser browser client
 │   ├── audio/
 │   │   └── SoundEngine.ts           # Web Audio API retro sci-fi synth & sound FX
 │   ├── scenes/
@@ -199,4 +192,3 @@ This repository includes a production-ready GitHub Actions workflow at [`.github
 ## 📜 License & Credits
 
 Created for **The Alien Connection** project. All textures and audio are procedurally generated in code without proprietary third-party visual or audio assets.
-
