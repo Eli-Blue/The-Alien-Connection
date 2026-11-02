@@ -1,0 +1,11 @@
+{
+  "oscilloscope": {
+    "target_freq": 84.7,
+    "target_harmonic": 65,
+    "freq_tolerance": 0.3,
+    "harmonic_tolerance": 3
+  },
+  "keypad": {
+    "code": "5729"
+  }
+}

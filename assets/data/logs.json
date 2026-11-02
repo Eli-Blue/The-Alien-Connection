@@ -1,0 +1,37 @@
+[
+  {
+    "id": "log_01_briefing",
+    "title": "DIRECTIVE: DEEP HORIZON - OCT 1983",
+    "sender": "Sub-Surface Monitoring Cmd",
+    "timestamp": "1983-10-04 03:14:00",
+    "content": "STATION ECHO-7 STATUS: Commissioned for deep seismic acoustic telemetry.\n\nPrimary mandate: listen to low-frequency anomalous harmonic pulses emanating from borehole shaft 9.\nStrict quarantine protocol in effect. All surface elevators locked until review."
+  },
+  {
+    "id": "log_02_containment",
+    "title": "INCIDENT LOG: SUB-LEVEL BREACH",
+    "sender": "Security Chief Vance",
+    "timestamp": "1983-10-11 22:45:18",
+    "content": "The array picked up a modulated waveform at 84.7 kHz. It is NOT seismic.\n\nFive minutes after lock, the communications lab terminal began printing unsolicited transmissions. Dr. Thorne refused to cut the receiver power. He claims the signal is \"responding to our heartbeats\".\nEmergency circuit breaker tripped in the Airlock."
+  },
+  {
+    "id": "log_03_thorne_notes",
+    "title": "DR. THORNE'S FIELD SCRAP",
+    "sender": "Dr. Aris Thorne",
+    "timestamp": "1983-10-12 04:02:11",
+    "content": "We assumed the transmission was traveling downward from an orbital satellite or deep space.\n\nGod help us. The telemetry antennas are pointing 4,000 meters STRAIGHT DOWN into the permafrost core.\nThe carrier wave is resonant at 84.7 kHz with 65% harmonic modulation.\nThe isolation vault lock sequence is tied to the station coordinates: Core [5], Array [7], Bio-Pass [2], Vault [9]."
+  },
+  {
+    "id": "log_04_intercept",
+    "title": "DECODED TRANSMISSION ECHO",
+    "sender": "Oscilloscope Receiver Node 3",
+    "timestamp": "1983-10-12 05:30:44",
+    "content": ">>> CARRIER SYNCHRONIZED <<<\nTRANS-ACOUSTIC SIGNATURE: BIOLOGICAL / METALLIC HYBRID.\n\n\"WE DO NOT COME FROM ABOVE. WE HAVE BEEN ASLEEP UNDER YOUR CONTINENT FOR THREE HUNDRED MILLION YEARS. YOUR DRILL AWAKENED THE NERVE ENDINGS.\"\n\nEMERGENCY OVERRIDE CODE FOR SUB-VAULT 9 CONFIRMED: 5 - 7 - 2 - 9."
+  },
+  {
+    "id": "log_05_vault_revelation",
+    "title": "BLACK BOX TRANSMISSION: VAULT INTERIOR",
+    "sender": "Dr. Aris Thorne - Final Broadcast",
+    "timestamp": "1983-10-12 06:12:00",
+    "content": "If someone from the surface is listening to this... do not send rescue teams.\n\nThe object in Vault 9 is not a meteor or inactive artifact. It is a dormant neural node of a planetary organism. The radio signals we broadcast into space for decades acted like an irritant... like an alarm bell.\n\nIt has connected to our communication relay. It is using our own antennas to broadcast outside... It is calling the rest of them."
+  }
+]
