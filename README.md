@@ -14,6 +14,10 @@ The Solar2D game is self-contained: it uses procedural vector graphics and Solar
 
 To build a standalone app, open the project in Solar2D Simulator and choose **Build** for the target platform. `config.lua` configures the 960 × 640 landscape game canvas.
 
+### The Whispering Observatory
+
+A separate, portrait-mode Solar2D mystery prototype is available in [`whispering-observatory/`](whispering-observatory/). Open that folder in the Simulator to investigate the observatory, find clues, and solve its celestial lock without changing the main game.
+
 ### Optional browser version
 
 The original browser client is still available using Node.js 18+:
